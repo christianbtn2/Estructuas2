@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Laboratorio#1</string>
+    <string name="btnLista">Button</string>
+    <string name="ingrese_nombre_de_la_cancion">Ingrese nombre de la cancion</string>
+    <string name="buscar">Buscar</string>
+    <string name="busqueda_de_canciones">Busqueda de canciones</string>
+    <string name="mi_lista">Mi Lista</string>
+</resources>

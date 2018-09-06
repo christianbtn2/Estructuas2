@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="Orientation">
+
+    <Button
+        android:id="@+id/btnOrdenarDuracionD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="520dp"
+        android:layout_marginRight="-10dp"
+        android:layout_marginLeft="0dp"
+        android:text="↑ Duracion" />
+
+    <Button
+        android:id="@+id/btnOrdenarDuracionA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="520dp"
+        android:layout_marginRight="-10dp"
+        android:layout_marginLeft="0dp"
+        android:text="↓ Duracion" />
+
+    <Button
+        android:id="@+id/btnOrdenarNombreD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="520dp"
+        android:layout_marginRight="-10dp"
+        android:layout_marginLeft="0dp"
+        android:text="↓ Nombre" />
+
+
+    <Button
+        android:id="@+id/btnOrdenarNombreA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="520dp"
+        android:layout_marginRight="-10dp"
+        android:layout_marginLeft="0dp"
+        android:text="↑ Nombre" />
+
+    <EditText
+        android:id="@+id/txtCancion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="280dp"
+        android:ems="10"
+        android:layout_marginLeft="-225dp"
+        android:inputType="textPersonName"
+         />
+
+    <Button
+        android:id="@+id/btnAgregar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="280dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginLeft="-320dp"
+        android:text="Agregar" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:text="Libreria de canciones"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        android:layout_marginLeft="-60dp"
+
+        />
+
+    <ListView
+        android:id="@+id/lista"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_marginEnd="-200dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="100dp"
+
+        android:layout_marginStart="-340dp"
+        android:layout_marginTop="60dp"
+
+        tools:ignore="MissingConstraints" />
+
+    <ListView
+        android:id="@+id/Lista2"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="-100dp"
+
+        tools:ignore="MissingConstraints"
+        >
+
+    </ListView>
+
+
+
+</LinearLayout>
