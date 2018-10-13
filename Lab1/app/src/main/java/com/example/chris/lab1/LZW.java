@@ -210,7 +210,13 @@ public class LZW {
         return Dbase;
     }
 
+    public String ObtenerNombre(String cadena){
+        String nombre = "";
 
+        String [] separar = cadena.split("/");
+        nombre = separar[separar.length - 1];
+        return nombre;
+    }
 
 
 

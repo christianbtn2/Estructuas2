@@ -41,6 +41,7 @@ public class Main3Activity extends AppCompatActivity {
     public static String direccion = "";
     public static String nombre = "";
     public static String cadena = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,7 +78,7 @@ public class Main3Activity extends AppCompatActivity {
         btnBuscar2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                BusquedaArchivo2();
+
             }
         });
 
@@ -95,9 +96,10 @@ public class Main3Activity extends AppCompatActivity {
             public void onClick(View view) {
                 final LZW lz = new LZW();
                 String texto = "";
+                nombre = lz.ObtenerNombre(direccion);
                 texto = lz.Compresion(cadena) + "\n";
                 Map<Integer,String> base = lz.ObtenerDiccionarioBase(cadena);
-                for (int i = 0; i < base.size() ; i++){
+                for (int i = 0; i <= base.size() ; i++){
                     texto += i + "->" + base.get(i) + "\n";
                 }
                 String filename = "CompresionLZW("+ nombre +")";
@@ -139,7 +141,7 @@ public class Main3Activity extends AppCompatActivity {
             String linea;
             while ((linea = br.readLine()) != null){
                 texto.append(linea);
-                texto.append("\n");
+
 
             }
             br.close();
@@ -149,12 +151,7 @@ public class Main3Activity extends AppCompatActivity {
         return  texto.toString();
     }
 
-    private void BusquedaArchivo2(){
-        Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
-        intent.addCategory(Intent.CATEGORY_OPENABLE);
-        intent.setType("lzw/*");
-        startActivityForResult(intent, READ_REQUEST_CODE);
-    }
+
 
 
     //Selecciona el archivo
@@ -184,7 +181,7 @@ public class Main3Activity extends AppCompatActivity {
 
 
     private void saveText(String filename, String contenido) throws IOException {
-        String fileName = filename + ".lzw";
+        String fileName = filename + ".txt";
         File file = new File(Environment.getExternalStorageDirectory().getAbsoluteFile(), fileName);
 
         FileOutputStream fos = new FileOutputStream(file);
@@ -195,10 +192,7 @@ public class Main3Activity extends AppCompatActivity {
     }
 
 
-    public void ObtenerNombre(){
-        String [] ruta = direccion.split("/");
-        nombre = ruta[ruta.length-1];
-    }
+
 
 
 
